@@ -28,7 +28,9 @@ Same request shape on open weights. Not TypeSafe's architecture.
 
 - [jevlike](https://github.com/vinnylarouge/jevlike) - Train a small one-pass scorer over a changing list of text options. Each option queries the context; a shared head returns one probability per option. Byte encoder from scratch, or a frozen Hugging Face encoder.
 - [kev](https://github.com/jaredpalmer/kev) - LoRA plus a pointer readout on Qwen (0.5B–8B). One prefill, many typed questions, TypeSafe `/v1/systemone` drop-in. Released weights and frozen evals against Jev.
+- [Nimble](https://github.com/bespokelabsai/nimble) - Qwen3.5-9B LoRA from Bespoke Labs. Contrastive recipe, not distilled from Jev. 90% vs Jev 93% on a 324-example holdout.
 - [Open Jev](https://github.com/intikhab49/open-jev-typed-decision-engine) - 150M ModernBERT encoder that answers per-request `noul` / `choice` / `score` questions in one pass. Trains on a Colab T4 in about 30 minutes. Not the same project as SemIf, which was also once called OpenJev.
+- [openjev-sglang](https://github.com/ekzhang/openjev-sglang) - TypeSafe `/v1/systemone` on Qwen 35B MoE via SGLang. Prefill once, then first-token logits per question. No extra training.
 - [reflex](https://github.com/kshetrajna12/reflex) - Open recreation on Qwen3.5. Prefills the state once, then scores every question in parallel from next-token logits. Serves the TypeSafe request shape. Browser demo on WebGPU.
 - [SemIf](https://github.com/TheoLeeCJ/SemIf) - Runtime-defined semantic decisions from direct option logits. CUDA, MLX, and WebGPU, plus committed benchmarks. Used to be called OpenJev.
 - [system-one](https://github.com/sgoedecke/system-one) - Turns any open LLM into a System One classifier: batched single-token choice inference, TypeSafe SDK compatible. Doom and wikiracing demos on Qwen3-8B.
@@ -61,6 +63,7 @@ Cheaper classifiers for comparison. They do not share Jev's request shape.
 
 - [fastText](https://github.com/facebookresearch/fastText) - Classic non-generative text classification library. Upstream archived in 2024.
 - [GLiNER](https://github.com/urchade/GLiNER) - Lightweight zero-shot structured extraction: you name the entity types at inference time. Often the comparison point in Jev classification benches.
+- [GLiNER2](https://github.com/fastino-ai/GLiNER2) - Fastino successor to GLiNER. Schema-conditioned encoder for classification, extraction, and relations in one pass.
 - [RouteLLM](https://github.com/lm-sys/RouteLLM) - Trains and serves routers that pick which LLM should handle a query, based on cost and expected quality, rather than answering the question itself.
 - [semantic-router](https://github.com/aurelio-labs/semantic-router) - Embedding-space route layer for LLMs and agents. Chooses a path from utterance similarity without a generative call.
 - [SetFit](https://github.com/huggingface/setfit) - Prompt-free few-shot text classification on Sentence Transformers. Strong when labels are fixed at train time.
