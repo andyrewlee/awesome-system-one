@@ -48,6 +48,7 @@ Loops that ask a System One model which action or target to take, then execute i
 
 ## SDKs & Adapters
 
+- [@ai-sdk/typesafe-ai](https://ai-sdk.dev/providers/ai-sdk-providers/typesafe-ai) - Official Vercel AI SDK evaluation provider. Choice, Score, and Boolean (Noul) over one state via `experimental_evaluate`.
 - [jev-mcp](https://github.com/jkudish/jev-mcp) - MCP server of Jev judgment tools: verify, screen, find, rerank, classify, decide, compare, extract, review, and gate.
 - [skills](https://github.com/typesafe-ai/skills) - Official agent skill for designing System One workflows from Claude Code, Codex, and other skill-compatible agents.
 - [system-one-adapter-python](https://github.com/typesafe-ai/system-one-adapter-python) - Drop-in `TypeSafeClient` replacement backed by OpenAI or Anthropic, for comparing Jev against an LLM on the same questions.
@@ -69,7 +70,9 @@ Adjacent fast-decision software. Useful for comparison; they do not implement th
 - [CLINC150 / OOS-Eval](https://github.com/clinc/oos-eval) - 150 in-scope intents plus explicit out-of-scope examples. Useful for routing, abstention, and confidence-threshold tests. CC BY 3.0.
 - [evals.typesafe.ai](https://evals.typesafe.ai) - TypeSafe's workflow evals: four production-shaped workflows scored against frontier LLM reference probabilities.
 - [Janus](https://github.com/FirasSX914/Janus) - Measures a confidence threshold on your labeled data, then routes Jev vs a larger model. Ships no default: on Banking77 routing wins; on Web of Science it says do not route.
+- [jev-behavior-study](https://github.com/RINNECODER/jev-behavior-study) - Independent Jev 1.13.0 field guide: option-order bias, middle-context failures, and cases where a correct prerequisite still yields the wrong action. Raw payloads and offline verification included.
 - [jev-benchmarks](https://github.com/AbdelStark/jev-benchmarks) - Independent calibration, selective-risk, and latency measurements of Jev against GLiNER and other baselines.
+- [jev-rerank-bench](https://github.com/anessbelbati/jev-rerank-bench) - Jev vs Cohere Rerank 4 vs zerank-2 vs a chat baseline on 14 datasets. Every raw response saved; nDCG@10 is a tie, not a win.
 - [JevBench](https://github.com/fstandhartinger/jevbench) - Public harness for Jev-class decision models: intelligence, calibration, speed, and cost on shared tasks.
 - [MASSIVE](https://github.com/alexa/massive) - Multilingual intent-and-slot dataset (~1M utterances, 52 languages) for testing whether a fast decision layer generalizes. CC BY 4.0.
 
