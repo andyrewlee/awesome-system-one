@@ -88,7 +88,7 @@ Cheaper classifiers for comparison. They do not share Jev's request shape.
 - [Judgment under Uncertainty: Heuristics and Biases](https://www.science.org/doi/10.1126/science.185.4157.1124) - Tversky & Kahneman (1974). Heuristic judgment under uncertainty.
 - [Reasoning the Fast and Frugal Way](https://pubmed.ncbi.nlm.nih.gov/8888650/) - Gigerenzer & Goldstein (1996). Simple heuristics that work with incomplete information.
 - [System-1.x: Learning to Balance Fast and Slow Planning with Language Models](https://arxiv.org/abs/2407.14414) - Learns when to use fast direct planning and when to search, instead of always picking one.
-- *Thinking, Fast and Slow*, Daniel Kahneman. The book most people mean by System 1 / System 2. Read the papers too.
+- [Thinking, Fast and Slow](https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow) - Daniel Kahneman. The book TypeSafe cites for the System 1 / System 2 framing.
 
 ## Contribute
 
