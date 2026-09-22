@@ -1,0 +1,19 @@
+name: Link check
+
+on:
+  schedule:
+    - cron: "17 6 * * 1" # weekly, Mondays
+  workflow_dispatch:
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          # 403/429 = bot-blocking or rate limiting on a live link (arxiv, pubmed, science.org, etc.)
+          args: --verbose --no-progress --accept 403,429 README.md
+          fail: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
