@@ -69,7 +69,6 @@ The model picks an action. Code runs it.
 - [mobile-jev](https://github.com/droidrun/mobile-jev) - Android agent on a real phone via Mobilerun. Jev picks `OPEN_APP` / `TAP` / `TYPE_TEXT` from an indexed snapshot. Text is copied from the goal, not generated.
 - [neo4jev](https://github.com/jexp/neo4jev) - Jev navigates a Neo4j graph by classifying over each node's neighboring relationships: graph traversal as a chain of typed choices.
 - [pi-jev](https://github.com/TheoOliveira/pi-jev) - Pi coding-agent extension: semantic tool and skill routing, typed `choice` / `noul` / `score` evaluations, optional auto-approval, and a post-run `jev-gate` CLI.
-- [tsai-sc](https://github.com/phyous/tsai-sc) - Jev controls original StarCraft shareware through keyboard and mouse, with recorded action probabilities.
 - [typesafe-assist](https://github.com/JanOstrowka/typesafe-assist) - Home Assistant conversation agent. Jev maps a spoken command plus exposed entities onto built-in intents. Free-text intents fall back to another agent.
 - [typesafe-computer-use](https://github.com/awlevin/typesafe-computer-use) - Computer use for about $0.0002 a step: OCR the screen, Jev classifies the next action, code clicks. macOS.
 - [typesafe-mario](https://github.com/fhshaik/typesafe-mario) - Jev plays Super Mario Bros. from structured emulator state: the classic RL demo with a decision model in the loop.
@@ -88,7 +87,6 @@ Plugins and CLIs that put a System One model inside other software.
 - [jev-align](https://github.com/sutro-sh/jev-align) - Build calibrated AI functions from human feedback: Jev judgments optimized with GEPA. From Sutro.
 - [jev-codex-router](https://github.com/0xNatoshi/jev-codex-router) - Per-turn model and reasoning-effort routing for Codex. Jev classifies each turn and picks the tier; a 7-day replay of 237 real turns measured about 60% savings against all-frontier.
 - [jev-curate](https://github.com/AkashPriyadarshii/jev-curate) - Dataset sifter for synthetic and pretraining corpora: a Rust streaming core sends Jev keep/drop decisions over Parquet rows.
-- [jev-pruner](https://github.com/tamaratran/jev-pruner) - Claude Code plugin that trims long Bash output with Jev before the model sees it.
 - [jev-review](https://github.com/devagrawal09/jev-review) - Staged code-review workflow with a local dashboard, using Jev to score and sort findings before a human opens the queue.
 - [jev-search](https://github.com/superagents-lab/jev-search) - Web search pipeline where Jev handles source selection, query understanding, and relevance ranking.
 - [jev-tree](https://github.com/reachjalil/jev-tree) - Recursive Jev choice over a taxonomy: selects from more than 255 options without hitting the choice cap.
