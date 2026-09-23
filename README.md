@@ -28,22 +28,27 @@ Hosted or open. State in, typed answers out.
 
 Same request shape on open weights. Not TypeSafe's architecture.
 
+- [agent-jev](https://github.com/malevrigns/agent-jev) - AgentJev-0.6B: a small trained decision model that takes unstructured state (diffs, traces, logs) and returns calibrated distributions in one ~50 ms forward pass. Apache 2.0.
 - [AnyJev](https://github.com/nokia-applied-research/AnyJev) - Turns any LLM into a Jev-style decision model: typed decisions with probabilities, no training. From Nokia Applied Research, Apache 2.0.
 - [decider](https://github.com/Mapika/decider) - Qwen3.5 fine-tunes (0.8B up to a 35B MoE, plus a vision build), Apache 2.0 weights on Hugging Face. Serves TypeSafe `/v1/systemone`, so the official SDK works by repointing `TYPESAFE_BASE_URL`.
 - [djev](https://github.com/Davipar/djev-dev) - DiffusionGemma plus vLLM: an inference method rather than new weights, with native image inputs and a hosted API. Ranked 3rd on JevBench v1.2, just under Jev itself.
 - [jeff](https://github.com/logan-markewich/jeff) - Self-hosted drop-in on GLiFormer 400M, MIT. Speaks the TypeSafe request shape (JevBench drove it with the official adapter); ranked in v1.2.2.
 - [jevlike](https://github.com/vinnylarouge/jevlike) - Train a small one-pass scorer over a changing list of text options. Each option queries the context; a shared head returns one probability per option. Byte encoder from scratch, or a frozen Hugging Face encoder.
 - [jevmlx](https://github.com/bnsd55/jevmlx) - Jev-style parallel constrained decisions for any MLX model on Apple Silicon. Scores every allowed answer per schema field in one pass, so the output is valid by construction.
+- [jev-visual](https://github.com/hr98w/jev-visual) - Educational Jev-like visual inference experiment on Apple Silicon: shared context, direct candidate scoring, and local visual demos.
 - [kev](https://github.com/jaredpalmer/kev) - LoRA plus a pointer readout on Qwen3.5 (0.8B–9B). One prefill, many typed questions, TypeSafe `/v1/systemone` drop-in. Released weights and frozen evals against Jev.
+- [LLM2Jev](https://github.com/Yinsongxu/LLM2Jev) - Adapts local language models into Jev-compatible decision engines with Choice / Score / Noul outputs, via prefill-only binary inference. Apache 2.0.
 - [NanoJev](https://github.com/TianyuCodings/NanoJev) - 0.6B replica trained from scratch, MIT. Ships the weights, the dataset, and the end-to-end training pipeline, plus a side-by-side demo against Jev.
 - [Nimble](https://github.com/bespokelabsai/nimble) - Qwen3.5-9B LoRA from Bespoke Labs. Contrastive recipe, not distilled from Jev. 90% vs Jev 93% on a 324-example holdout.
 - [Open Jev](https://github.com/intikhab49/open-jev-typed-decision-engine) - 150M ModernBERT encoder that answers per-request `noul` / `choice` / `score` questions in one pass. Trains on a Colab T4 in about 30 minutes. Not the same project as SemIf, which was also once called OpenJev.
 - [open-alternative-jev](https://github.com/ikermoel/open-alternative-jev) - System One-style layer on open weights, ranked on JevBench. Its cautionary detail: 72% vs 21% on the same answer-judging items with option order flipped.
+- [openjev](https://github.com/razorback16/openjev) - Open, Jev-compatible System One decision server on DiffusionGemma. Apache 2.0.
 - [openjev-sglang](https://github.com/ekzhang/openjev-sglang) - TypeSafe `/v1/systemone` on Qwen 35B MoE via SGLang. Prefill once, then first-token logits per question. No extra training.
 - [openJev-verdict-2.0](https://github.com/Heman10x-NGU/openJev-verdict-2.0) - 151M ModernBERT decision engine, non-autoregressive, with published calibration numbers. Claims the top spot over Jev and Laya on the LocalLLaMA typed-decisions benchmark.
 - [PlayJev](https://github.com/OmniJev/PlayJev) - 0.8B multimodal Jev-like model that plays GUI games directly from raw pixels. Apache 2.0.
 - [reflex](https://github.com/kshetrajna12/reflex) - Open recreation on Qwen3.5. Prefills the state once, then scores every question in parallel from next-token logits. Serves the TypeSafe request shape. Browser demo on WebGPU.
 - [SemIf](https://github.com/TheoLeeCJ/SemIf) - Runtime-defined semantic decisions from direct option logits. CUDA, MLX, and WebGPU, plus committed benchmarks. Used to be called OpenJev.
+- [simple-jev](https://github.com/featherless-ai/simple-jev) - Turns any open model into a classifier / Jev endpoint. From Featherless, Apache 2.0.
 - [system-one](https://github.com/sgoedecke/system-one) - Turns any open LLM into a System One classifier: batched single-token choice inference, TypeSafe SDK compatible. Doom and wikiracing demos on Qwen3-8B.
 - [system-one-open](https://github.com/mithalouni/system-one-open) - Jev-style replica on Gemma 4 E2B / Gemma 3 270M, trained and served on Modal. One forward pass, no decoding. Live demos for support, Doom, browser-use, and smart home.
 - [systemANE](https://github.com/kerryrm/systemANE) - Apple's Neural Engine as a free local System One decision engine on macOS: "Jev at home."
@@ -56,6 +61,7 @@ The model picks an action. Code runs it.
 - [computer-use-jev](https://github.com/paulsmith/computer-use-jev) - Drives native macOS apps through the Accessibility API. Jev chooses the next action and target token from a live snapshot, and stops if confidence drops too low.
 - [embodied-jev](https://github.com/FBddcz/embodied-jev) - MuJoCo robot decision workbench: MiniCPM-2B or Jev-class APIs pick the next action, with physics previews.
 - [jev-browser](https://github.com/jkudish/jev-browser) - Headless browser agent. Jev picks click / type / select / done from the page's elements; code owns budgets and stop gates. MCP server, CLI, or library.
+- [jev-browser-use](https://github.com/wy-coliney/jev-browser-use) - Split-brain browser agent: Jev clicks, Codex thinks and verifies.
 - [jev-chat-jarvis](https://github.com/jev-chat/jev-chat-jarvis) - Phone chat copilot for WeChat / QQ / X / Feishu: reads the screen, suggests candidate replies, one tap to fill. Read-only — no app hooks.
 - [jev-drone](https://github.com/RomanSlack/jev-drone) - Camera-only autonomous drone in MuJoCo with Jev in the loop at 2.5 Hz.
 - [jev-trader](https://github.com/jarrodwatts/jev-trader) - Experimental: one Jev buy/sell decision every Monad block (about 300 ms) on the Kuru MON-USDC book. Dry-run by default.
@@ -77,13 +83,17 @@ Plugins and CLIs that put a System One model inside other software.
 - [Canny](https://github.com/qkal/Canny) - Stops coding agents from claiming done without evidence: deterministic hooks decide what needs checking, Jev judges the result.
 - [fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction) - Claude Code plugin that replaces the compaction summary with Jev decisions: every tool call and result is scored in one request and the stale ones dropped.
 - [Foreman](https://github.com/thruwire/foreman) - Jev as a fast supervisor above slower coding agents, judging whether the work is complete, the requirements met, the tests sufficient, or a human is needed.
+- [hermes-jev-skills](https://github.com/kerpopule/hermes-jev-skills) - Jev-powered skill suite for Hermes agents (also Claude Code and Codex): model routing, memory, compaction, skill selection, computer and browser use.
 - [invalidate](https://github.com/chopratejas/invalidate) - Invalidation layer for AI memory: every fact gets a lease, and new evidence ends it.
 - [jev-align](https://github.com/sutro-sh/jev-align) - Build calibrated AI functions from human feedback: Jev judgments optimized with GEPA. From Sutro.
 - [jev-codex-router](https://github.com/0xNatoshi/jev-codex-router) - Per-turn model and reasoning-effort routing for Codex. Jev classifies each turn and picks the tier; a 7-day replay of 237 real turns measured about 60% savings against all-frontier.
 - [jev-curate](https://github.com/AkashPriyadarshii/jev-curate) - Dataset sifter for synthetic and pretraining corpora: a Rust streaming core sends Jev keep/drop decisions over Parquet rows.
+- [jev-pruner](https://github.com/tamaratran/jev-pruner) - Claude Code plugin that trims long Bash output with Jev before the model sees it.
 - [jev-review](https://github.com/devagrawal09/jev-review) - Staged code-review workflow with a local dashboard, using Jev to score and sort findings before a human opens the queue.
+- [jev-search](https://github.com/superagents-lab/jev-search) - Web search pipeline where Jev handles source selection, query understanding, and relevance ranking.
 - [jev-tree](https://github.com/reachjalil/jev-tree) - Recursive Jev choice over a taxonomy: selects from more than 255 options without hitting the choice cap.
 - [jevframe](https://github.com/ktaletsk/jevframe) - Semantic AI for Pandas and Polars: classify and score DataFrame rows with natural-language questions and full probabilities.
+- [jevmail](https://github.com/fazlerocks/jevmail) - Open-source Gmail triage: sorts an inbox into needs-reply / updates / promos / spam. Read-only, runs locally, about 3 cents per 1,000 emails.
 - [jeview](https://github.com/andududu/jeview) - Local visualizer for Jev: a live view of every call your code makes.
 - [JevRouter](https://github.com/BillionsBobby/JevRouter) - Jev-powered router across models, tools, and subagents.
 - [jgrep](https://github.com/keltokhy/jgrep) - Grep where the pattern is a description: filters lines by meaning for about a thousandth of a cent each.
