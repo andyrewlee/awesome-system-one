@@ -6,7 +6,7 @@ You give them some state and a set of typed questions. They give back a choice, 
 
 ## Contents
 
-- [Models](#models) - Call a hosted model. Jev for the original API, Laya if you want open weights.
+- [Models](#models) - Call a hosted model. Jev for the original API, CLM or Laya for open weights.
 - [Open Implementations](#open-implementations) - Train or run one yourself.
 - [Agents](#agents) - Need it to pick the next click or tap.
 - [Tools](#tools) - Ready-made plugin or CLI.
@@ -19,6 +19,7 @@ You give them some state and a set of typed questions. They give back a choice, 
 
 Hosted or open. State in, typed answers out.
 
+- [CLM](https://github.com/Contrastive-LM/CLM) - Contrastive Language Model: dual state/action encoders (frozen Qwen3-8B + 20M heads) where candidates embed once and cache, rather than re-reading the state. Apache 2.0, TypeSafe wire-compatible. Claims Jev parity on computer-use, gaming, and tool-calling at up to 9× lower latency, plus SOTA held-out verifier results (Terminal-Bench 2.1, DeepSWE).
 - [Cua-S1](https://github.com/trycua/cua/tree/main/libs/cua-s1) - Research stack for small specialist computer-use models. First checkpoint is form-oriented: [cua-s1-forms](https://huggingface.co/cua-ai/cua-s1-forms), a 706K-param option scorer with its [training dataset](https://huggingface.co/datasets/cua-ai/cua-s1-forms) on Hugging Face. Planning and execution stay separate.
 - [Jev](https://typesafe.ai) - TypeSafe's System One model. Choice, Score, and Noul over a state in one request, about 70–500 ms, trained with RLCD. Hosted API ($0.042 per million input tokens, output free); weights unpublished. Also on [OpenRouter](https://openrouter.ai/typesafe/jev-1.13), [Vercel AI Gateway](https://vercel.com/changelog/typesafe-ai-jev-now-available-on-ai-gateway), [Cloudflare Workers AI](https://developers.cloudflare.com/ai/models/typesafe/jev/), and [LLMGateway](https://docs.llmgateway.io/features/system-one). [Docs](https://docs.typesafe.ai/concepts/system-one) · [Launch post](https://typesafe.ai/blog/introducing-system-one-models-and-jev)
 - [Jev-Omni](https://huggingface.co/akhilaaa3/Jev-Omni) - Multimodal decision classifier on Gemma 4 12B: text, image, audio, or video in, a probability per option out. Apache 2.0 weights. One question per call, best under about 20 options.
