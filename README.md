@@ -182,23 +182,28 @@ Cheaper classifiers for comparison. They do not share Jev's request shape.
 
 ## Benchmarks
 
+### Suites & harnesses
+
 - [Banking77](https://github.com/PolyAI-LDN/task-specific-datasets) - 77 fine-grained banking intents over 13k queries. Single-domain counterpart to CLINC150, and the benchmark Janus reports wins on. CC BY 4.0.
 - [CLINC150 / OOS-Eval](https://github.com/clinc/oos-eval) - 150 in-scope intents plus explicit out-of-scope examples. Useful for routing, abstention, and confidence-threshold tests. CC BY 3.0.
 - [DecisionBench](https://huggingface.co/datasets/akhilaaa3/decision-bench) - 80 scenarios and 293 questions per tier (medium is rules-based, hard is judgment calls), with a cost-per-decision axis baked in. What Jev-Omni reports on. Apache 2.0.
 - [evals.typesafe.ai](https://evals.typesafe.ai) - TypeSafe's workflow evals: four production-shaped workflows scored against frontier LLM reference probabilities.
 - [fast-decisions](https://huggingface.co/datasets/fastino/fast-decisions) - Fastino's held-out suite: 17 operational domains × 300 examples each, scoring Jev, SemIf, Laya, and GLiFormer head-to-head on the same inputs. First-party to GLiNER2.5-Decide, which tops it.
 - [Image JevBench](https://benchmarkheaven.com/image-jev-bench) - Held-out image-decision suite: 684 items (228 public / 456 sealed) with frozen hashes and contamination tracking — it flagged Kev's Mind2Web training overlap itself. Jev-Omni, decider-vision, and Reflex top it; frontier chat APIs score near zero.
+- [JevBench](https://github.com/fstandhartinger/jevbench) - Public harness for Jev-class decision models: intelligence, calibration, speed, and cost on shared tasks. About 48 systems ranked; Jev 1.13.0 currently #1.
+- [jevals](https://github.com/openlayer-ai/jevals) - Agent evals and guardrails as Jev decisions: one request per trace. Runs locally on Kev or Laya. From Openlayer.
+- [LocalLLaMA/typed-decisions](https://huggingface.co/datasets/LocalLLaMA/typed-decisions) - Community typed-decision suites (customer service, invoices, security incidents, agent traces) the open implementations report accuracy and calibration against. Apache 2.0.
+- [MASSIVE](https://github.com/alexa/massive) - Multilingual intent-and-slot dataset (about 1M utterances, 52 languages) for testing whether a fast decision layer generalizes. CC BY 4.0.
+- [sysone-bench](https://github.com/instax-dutta/sysone-bench) - Head-to-head of System One models: Laya vs Jev on byte-identical inputs.
+
+### Probes & studies
+
 - [Janus](https://github.com/FirasSX914/Janus) - Measures a confidence threshold on your labeled data, then routes Jev vs a larger model. Ships no default: on Banking77 routing wins; on Web of Science it says do not route.
 - [jev-behavior-study](https://github.com/RINNECODER/jev-behavior-study) - Independent look at Jev 1.13.0: option-order bias, facts lost in the middle of long context, and cases where a correct prerequisite still leads to the wrong action. Raw payloads and offline verification included.
 - [jev-benchmarks](https://github.com/AbdelStark/jev-benchmarks) - Independent calibration, selective-risk, and latency measurements of Jev against GLiNER and other baselines.
 - [jev-ood-calibration](https://github.com/scienthoon/jev-ood-calibration) - Independent calibration test on tasks Jev cannot have seen: 900 rule-generated tickets plus public benchmarks, with ECE noise floors and a temperature refit.
 - [jev-phishing-bench](https://github.com/anisselbd/jev-phishing-bench) - Jev vs Claude Haiku 4.5 on 2,000 phishing emails: accuracy, calibration, latency, and cost, reproducible.
 - [jev-rerank-bench](https://github.com/anessbelbati/jev-rerank-bench) - Jev vs Cohere Rerank 4 vs zerank-2 vs a chat baseline on 14 datasets. Every raw response saved. nDCG@10 is a tie, not a win.
-- [JevBench](https://github.com/fstandhartinger/jevbench) - Public harness for Jev-class decision models: intelligence, calibration, speed, and cost on shared tasks. About 48 systems ranked; Jev 1.13.0 currently #1.
-- [jevals](https://github.com/openlayer-ai/jevals) - Agent evals and guardrails as Jev decisions: one request per trace. Runs locally on Kev or Laya. From Openlayer.
-- [LocalLLaMA/typed-decisions](https://huggingface.co/datasets/LocalLLaMA/typed-decisions) - Community typed-decision suites (customer service, invoices, security incidents, agent traces) the open implementations report accuracy and calibration against. Apache 2.0.
-- [MASSIVE](https://github.com/alexa/massive) - Multilingual intent-and-slot dataset (about 1M utterances, 52 languages) for testing whether a fast decision layer generalizes. CC BY 4.0.
-- [sysone-bench](https://github.com/instax-dutta/sysone-bench) - Head-to-head of System One models: Laya vs Jev on byte-identical inputs.
 
 ## Reading
 
