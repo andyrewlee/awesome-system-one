@@ -66,21 +66,26 @@ Same request shape on open weights. Not TypeSafe's architecture.
 
 The model picks an action. Code runs it.
 
+### Screen & device control
+
 - [computer-use-jev](https://github.com/paulsmith/computer-use-jev) - Drives native macOS apps through the Accessibility API. Jev chooses the next action and target token from a live snapshot, and stops if confidence drops too low.
-- [embodied-jev](https://github.com/FBddcz/embodied-jev) - MuJoCo robot decision workbench: MiniCPM-2B or Jev-class APIs pick the next action, with physics previews.
 - [jev-browser](https://github.com/jkudish/jev-browser) - Headless browser agent. Jev picks click / type / select / done from the page's elements; code owns budgets and stop gates. MCP server, CLI, or library.
 - [jev-browser-use](https://github.com/wy-coliney/jev-browser-use) - Split-brain browser agent: Jev clicks, Codex thinks and verifies.
+- [jev-ultrafast](https://github.com/browser-use/jev-ultrafast) - Browser agent with a dynamic, indexed action space. Jev picks an operation and an element in one request; a small LLM writes text only when the operation is `TYPE_TEXT`. Zürich to London on Google Flights in 7.1 seconds.
+- [mobile-jev](https://github.com/droidrun/mobile-jev) - Android agent on a real phone via Mobilerun. Jev picks `OPEN_APP` / `TAP` / `TYPE_TEXT` from an indexed snapshot. Text is copied from the goal, not generated.
+- [tiptour-macos](https://github.com/milind-soni/tiptour-macos) - Local computer-use app for macOS where Jev is the default engine: it picks from locally detected controls and the app executes and validates each action.
+- [typesafe-computer-use](https://github.com/awlevin/typesafe-computer-use) - Computer use for about $0.0002 a step: OCR the screen, Jev classifies the next action, code clicks. macOS.
+
+### Domain agents
+
+- [embodied-jev](https://github.com/FBddcz/embodied-jev) - MuJoCo robot decision workbench: MiniCPM-2B or Jev-class APIs pick the next action, with physics previews.
 - [jev-chat-jarvis](https://github.com/jev-chat/jev-chat-jarvis) - Phone chat copilot for WeChat / QQ / X / Feishu: reads the screen, suggests candidate replies, one tap to fill. Read-only — no app hooks.
 - [jev-drone](https://github.com/RomanSlack/jev-drone) - Camera-only autonomous drone in MuJoCo with Jev in the loop at 2.5 Hz.
 - [jev-trader](https://github.com/jarrodwatts/jev-trader) - Experimental: one Jev buy/sell decision every Monad block (about 300 ms) on the Kuru MON-USDC book. Dry-run by default.
-- [jev-ultrafast](https://github.com/browser-use/jev-ultrafast) - Browser agent with a dynamic, indexed action space. Jev picks an operation and an element in one request; a small LLM writes text only when the operation is `TYPE_TEXT`. Zürich to London on Google Flights in 7.1 seconds.
-- [mobile-jev](https://github.com/droidrun/mobile-jev) - Android agent on a real phone via Mobilerun. Jev picks `OPEN_APP` / `TAP` / `TYPE_TEXT` from an indexed snapshot. Text is copied from the goal, not generated.
 - [neo4jev](https://github.com/jexp/neo4jev) - Jev navigates a Neo4j graph by classifying over each node's neighboring relationships: graph traversal as a chain of typed choices.
 - [pi-jev](https://github.com/TheoOliveira/pi-jev) - Pi coding-agent extension: semantic tool and skill routing, typed `choice` / `noul` / `score` evaluations, optional auto-approval, and a post-run `jev-gate` CLI.
 - [QuantDinger](https://github.com/OpenByteInc/QuantDinger) - Open-source AI trading OS with a Jev decision gate in front of live entry orders: typed Choice plus an auditable decision timeline, fail-open, and exits that always bypass AI.
-- [tiptour-macos](https://github.com/milind-soni/tiptour-macos) - Local computer-use app for macOS where Jev is the default engine: it picks from locally detected controls and the app executes and validates each action.
 - [typesafe-assist](https://github.com/JanOstrowka/typesafe-assist) - Home Assistant conversation agent. Jev maps a spoken command plus exposed entities onto built-in intents. Free-text intents fall back to another agent.
-- [typesafe-computer-use](https://github.com/awlevin/typesafe-computer-use) - Computer use for about $0.0002 a step: OCR the screen, Jev classifies the next action, code clicks. macOS.
 - [typesafe-mario](https://github.com/fhshaik/typesafe-mario) - Jev plays Super Mario Bros. from structured emulator state: the classic RL demo with a decision model in the loop.
 
 ## Tools
