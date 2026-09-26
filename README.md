@@ -145,20 +145,28 @@ Plugins and CLIs that put a System One model inside other software.
 
 ## SDKs & Adapters
 
+### Official
+
 - [@ai-sdk/typesafe-ai](https://ai-sdk.dev/providers/ai-sdk-providers/typesafe-ai) - Official Vercel AI SDK evaluation provider. Choice, Score, and Boolean (Noul) over one state via `experimental_evaluate`.
-- [Community SDKs](https://systemonemodels.org/examples/tools/) - Unofficial clients for Go, Rust, Ruby, PHP, .NET, Elixir, and Swift, tracked by language. All launched in Jev's first week — check the last commit before depending on one.
-- [eve](https://github.com/vercel/eve) - Vercel's open agent framework, where Jev powers the `evaluate` primitive and tool-approval policies.
-- [hono-jev-router](https://github.com/yusukebe/hono-jev-router) - Semantic HTTP routing middleware for Hono: route requests by meaning, from Hono's creator.
-- [jev-foundation-models](https://github.com/peterfriese/jev-foundation-models) - Native Swift 6 bridge that puts Jev behind Apple's Foundation Models framework interface.
-- [jev-mcp](https://github.com/jkudish/jev-mcp) - MCP server of Jev judgment tools: verify, screen, find, rerank, classify, decide, compare, extract, review, and gate.
-- [laya-mlx](https://github.com/mizorewww/laya-mlx) - Native MLX runtime for Laya on Apple Silicon: 7–14 ms decisions on an M3 Max, no GPU server needed.
-- [llm-typesafe](https://github.com/simonw/llm-typesafe) - Simon Willison's `llm` plugin for Jev and other TypeSafe models.
-- [qualm](https://github.com/qddegtya/qualm) - TypeScript wrapper where every decision needs a required `unsure` branch — ignoring the uncertainty case is a compile error.
 - [skills](https://github.com/typesafe-ai/skills) - Official agent skill for designing System One workflows from Claude Code, Codex, and other skill-compatible agents.
-- [system-one-adapter-python](https://github.com/typesafe-ai/system-one-adapter-python) - Drop-in `TypeSafeClient` replacement backed by OpenAI or Anthropic, for comparing Jev against an LLM on the same questions.
-- [typesafe-mcp](https://github.com/itsmostafa/typesafe-mcp) - MCP server as a single static Go binary, no Node or Python runtime. Sends usage guidance back to the client so the agent writes better questions.
 - [typesafe-sdk-js](https://github.com/typesafe-ai/typesafe-sdk-js) - Official TypeScript / JavaScript client.
 - [typesafe-sdk-python](https://github.com/typesafe-ai/typesafe-sdk-python) - Official synchronous and asynchronous Python client.
+
+### Community clients
+
+- [Community SDKs](https://systemonemodels.org/examples/tools/) - Unofficial clients for Go, Rust, Ruby, PHP, .NET, Elixir, and Swift, tracked by language. All launched in Jev's first week — check the last commit before depending on one.
+- [jev-foundation-models](https://github.com/peterfriese/jev-foundation-models) - Native Swift 6 bridge that puts Jev behind Apple's Foundation Models framework interface.
+- [llm-typesafe](https://github.com/simonw/llm-typesafe) - Simon Willison's `llm` plugin for Jev and other TypeSafe models.
+- [qualm](https://github.com/qddegtya/qualm) - TypeScript wrapper where every decision needs a required `unsure` branch — ignoring the uncertainty case is a compile error.
+
+### Integrations & middleware
+
+- [eve](https://github.com/vercel/eve) - Vercel's open agent framework, where Jev powers the `evaluate` primitive and tool-approval policies.
+- [hono-jev-router](https://github.com/yusukebe/hono-jev-router) - Semantic HTTP routing middleware for Hono: route requests by meaning, from Hono's creator.
+- [jev-mcp](https://github.com/jkudish/jev-mcp) - MCP server of Jev judgment tools: verify, screen, find, rerank, classify, decide, compare, extract, review, and gate.
+- [laya-mlx](https://github.com/mizorewww/laya-mlx) - Native MLX runtime for Laya on Apple Silicon: 7–14 ms decisions on an M3 Max, no GPU server needed.
+- [system-one-adapter-python](https://github.com/typesafe-ai/system-one-adapter-python) - Drop-in `TypeSafeClient` replacement backed by OpenAI or Anthropic, for comparing Jev against an LLM on the same questions.
+- [typesafe-mcp](https://github.com/itsmostafa/typesafe-mcp) - MCP server as a single static Go binary, no Node or Python runtime. Sends usage guidance back to the client so the agent writes better questions.
 
 ## Baselines
 
