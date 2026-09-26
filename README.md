@@ -120,6 +120,8 @@ Plugins and CLIs that put a System One model inside other software.
 - [@ai-sdk/typesafe-ai](https://ai-sdk.dev/providers/ai-sdk-providers/typesafe-ai) - Official Vercel AI SDK evaluation provider. Choice, Score, and Boolean (Noul) over one state via `experimental_evaluate`.
 - [Community SDKs](https://systemonemodels.org/examples/tools/) - Unofficial clients for Go, Rust, Ruby, PHP, .NET, Elixir, and Swift, tracked by language. All launched in Jev's first week — check the last commit before depending on one.
 - [eve](https://github.com/vercel/eve) - Vercel's open agent framework, where Jev powers the `evaluate` primitive and tool-approval policies.
+- [hono-jev-router](https://github.com/yusukebe/hono-jev-router) - Semantic HTTP routing middleware for Hono: route requests by meaning, from Hono's creator.
+- [jev-foundation-models](https://github.com/peterfriese/jev-foundation-models) - Native Swift 6 bridge that puts Jev behind Apple's Foundation Models framework interface.
 - [jev-mcp](https://github.com/jkudish/jev-mcp) - MCP server of Jev judgment tools: verify, screen, find, rerank, classify, decide, compare, extract, review, and gate.
 - [laya-mlx](https://github.com/mizorewww/laya-mlx) - Native MLX runtime for Laya on Apple Silicon: 7–14 ms decisions on an M3 Max, no GPU server needed.
 - [llm-typesafe](https://github.com/simonw/llm-typesafe) - Simon Willison's `llm` plugin for Jev and other TypeSafe models.
