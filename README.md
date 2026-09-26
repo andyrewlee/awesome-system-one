@@ -207,23 +207,31 @@ Cheaper classifiers for comparison. They do not share Jev's request shape.
 
 ## Reading
 
+### Docs & ecosystem
+
 - [Confidence](https://docs.typesafe.ai/confidence) - How Choice/Score confidence differs from probability, and how to gate act / review / escalate in code. Noul has no separate confidence field.
 - [Cookbooks](https://docs.typesafe.ai/cookbooks) - Official patterns: parallel questions, citation check, RAG passage classification, date extraction, skill suggestion.
 - [How to build with TypeSafe](https://docs.typesafe.ai/concepts/how-to-build-with-system-one) - Keep control flow in code. Split work into atomic questions, then combine the answers and route on uncertainty.
 - [Introducing System One Models & Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) - TypeSafe's launch post: RLCD, parallel sampling, and how this differs from an LLM.
-- [Jev 1.13 jaggedness](https://docs.typesafe.ai/model-jaggedness/jev-1.13) - First-party failure modes: counting, dates, indirection, distractors, generation. Keep arithmetic in code.
-- [Jev's Architecture Unmasked](https://archerhume.com/posts/jevs-architecture-unmasked) - Community teardown of Jev's probable architecture; the write-up kev's open models are built from.
 - [System One (docs)](https://docs.typesafe.ai/concepts/system-one) - Official definition of the model class and the Choice / Score / Noul primitives.
 - [awesomejev.com](https://awesomejev.com) - Community directory indexing about a thousand Jev projects with daily-refreshed stars. Less curated, good for exhaustive search.
+- [jev.store](https://www.jev.store) - Community store for Jev apps, extensions, and tools: a distribution surface with a submit flow, distinct from the firehose directories.
 - [Latent Space: Jev, a System One model that only decides](https://www.latent.space/p/ainews-jev-a-system-one-model-that) - Launch-day writeup on what a decision-only model changes for latency and cost.
 - [systemonemodels.org](https://systemonemodels.org) - Independent hub tracking every System One model, open alternative, community SDK, and example. The place to check when this list lags.
-- [jev.store](https://www.jev.store) - Community store for Jev apps, extensions, and tools: a distribution surface with a submit flow, distinct from the firehose directories.
+
+### Jev under the microscope
+
+- [JEV vs. LLMs as Rubric Judges: Cheaper, Faster, and Wrong in the Same Places](https://arxiv.org/abs/2609.29769) - Rao & Callison-Burch (2026). The counterpoint to the cascade story: Jev is 29–325× cheaper and competitive on binary criteria, but LLM judges repeat nearly all of its most confident errors, capping escalation gains at ~1.5 points.
+- [JEV-as-a-Judge: Accept When Confident, Escalate When Unsure](https://arxiv.org/abs/2609.26550) - Li, Miao, Krishnan & Padman / CMU (2026). First independent study of Jev as an eval judge: within ~3 points of the strongest LLM judge on ordinary preference at 0.36% of the fee, weaker on derivation-checking. A confidence-gated cascade keeps 99% of the big judge's accuracy at ~57% of the cost.
+- [Jev 1.13 jaggedness](https://docs.typesafe.ai/model-jaggedness/jev-1.13) - First-party failure modes: counting, dates, indirection, distractors, generation. Keep arithmetic in code.
+- [Jev's Architecture Unmasked](https://archerhume.com/posts/jevs-architecture-unmasked) - Community teardown of Jev's probable architecture; the write-up kev's open models are built from.
+
+### Foundations
+
 - [Agents Thinking Fast and Slow: A Talker-Reasoner Architecture](https://arxiv.org/abs/2410.08328) - Christakopoulou, Mourad & Matarić / DeepMind (2024). Splits an agent into a fast conversational Talker (System 1) and a slow planning Reasoner (System 2).
 - [Distilling System 2 into System 1](https://arxiv.org/abs/2407.06023) - Yu, Xu, Weston & Kulikov / Meta (2024). Compiles intermediate-thought techniques into single-pass outputs; the research framing closest to what Jev is.
 - [Dual-processing accounts of reasoning, judgment, and social cognition](https://pubmed.ncbi.nlm.nih.gov/18154502/) - Evans (2008). Review of dual-process theories. System 1 is a family of accounts, not one algorithm.
 - [Judgment under Uncertainty: Heuristics and Biases](https://www.science.org/doi/10.1126/science.185.4157.1124) - Tversky & Kahneman (1974). Heuristic judgment under uncertainty.
-- [JEV vs. LLMs as Rubric Judges: Cheaper, Faster, and Wrong in the Same Places](https://arxiv.org/abs/2609.29769) - Rao & Callison-Burch (2026). The counterpoint to the cascade story: Jev is 29–325× cheaper and competitive on binary criteria, but LLM judges repeat nearly all of its most confident errors, capping escalation gains at ~1.5 points.
-- [JEV-as-a-Judge: Accept When Confident, Escalate When Unsure](https://arxiv.org/abs/2609.26550) - Li, Miao, Krishnan & Padman / CMU (2026). First independent study of Jev as an eval judge: within ~3 points of the strongest LLM judge on ordinary preference at 0.36% of the fee, weaker on derivation-checking. A confidence-gated cascade keeps 99% of the big judge's accuracy at ~57% of the cost.
 - [MDLM](https://github.com/kuleshov-group/mdlm) - Masked diffusion language model (NeurIPS 2024): parallel, non-autoregressive generation. The open research line nearest to Jev's parallel-sampler claims.
 - [Reasoning the Fast and Frugal Way](https://pubmed.ncbi.nlm.nih.gov/8888650/) - Gigerenzer & Goldstein (1996). Simple heuristics that work with incomplete information.
 - [System-1.x: Learning to Balance Fast and Slow Planning with Language Models](https://arxiv.org/abs/2407.14414) - Learns when to use fast direct planning and when to search, instead of always picking one.
