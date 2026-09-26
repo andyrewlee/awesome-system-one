@@ -54,6 +54,7 @@ Same request shape on open weights. Not TypeSafe's architecture.
 - [system-one](https://github.com/sgoedecke/system-one) - Turns any open LLM into a System One classifier: batched single-token choice inference, TypeSafe SDK compatible. Doom and wikiracing demos on Qwen3-8B.
 - [system-one-open](https://github.com/mithalouni/system-one-open) - Jev-style replica on Gemma 4 E2B / Gemma 3 270M, trained and served on Modal. One forward pass, no decoding. Live demos for support, Doom, browser-use, and smart home.
 - [systemANE](https://github.com/kerryrm/systemANE) - Apple's Neural Engine as a free local System One decision engine on macOS: "Jev at home."
+- [Tev1](https://github.com/togethercomputer/tev1) - Together AI's Jev-inspired experiment: Qwen3.5 fine-tunes that take state + question + 2–24 options and return one letter — openly next-token, not a non-autoregressive runtime. MIT, with full data recipe and a "train your own for $17" writeup.
 - [von](https://github.com/wfzyx/von) - Non-autoregressive local drop-in, sub-15 ms decisions, Apache 2.0.
 
 ## Agents
