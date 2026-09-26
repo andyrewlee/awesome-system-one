@@ -30,31 +30,36 @@ Hosted or open. State in, typed answers out.
 
 Same request shape on open weights. Not TypeSafe's architecture.
 
+### Trained replicas
+
 - [agent-jev](https://github.com/malevrigns/agent-jev) - AgentJev-0.6B: a small trained decision model that takes unstructured state (diffs, traces, logs) and returns calibrated distributions in one ~50 ms forward pass. Apache 2.0.
-- [AnyJev](https://github.com/nokia-applied-research/AnyJev) - Turns any LLM into a Jev-style decision model: typed decisions with probabilities, no training. From Nokia Applied Research, Apache 2.0.
 - [decider](https://github.com/Mapika/decider) - Qwen3.5 fine-tunes (0.8B up to a 35B MoE, plus a vision build), Apache 2.0 weights on Hugging Face. The vision build ranks #2 on Image JevBench. Serves TypeSafe `/v1/systemone`, so the official SDK works by repointing `TYPESAFE_BASE_URL`.
-- [djev](https://github.com/Davipar/djev-dev) - DiffusionGemma plus vLLM: an inference method rather than new weights, with native image inputs and a hosted API. Ranked 3rd on JevBench v1.2, just under Jev itself.
-- [jeff](https://github.com/logan-markewich/jeff) - Self-hosted drop-in on GLiFormer 400M, MIT. Speaks the TypeSafe request shape (JevBench drove it with the official adapter); ranked in v1.2.2.
 - [jevlike](https://github.com/vinnylarouge/jevlike) - Train a small one-pass scorer over a changing list of text options. Each option queries the context; a shared head returns one probability per option. Byte encoder from scratch, or a frozen Hugging Face encoder.
-- [jevmlx](https://github.com/bnsd55/jevmlx) - Jev-style parallel constrained decisions for any MLX model on Apple Silicon. Scores every allowed answer per schema field in one pass, so the output is valid by construction.
-- [jev-visual](https://github.com/hr98w/jev-visual) - Educational Jev-like visual inference experiment on Apple Silicon: shared context, direct candidate scoring, and local visual demos.
 - [kev](https://github.com/jaredpalmer/kev) - LoRA plus a pointer readout on Qwen3.5 (0.8B / 4B / 9B), Apache 2.0, with training code and frozen eval suites. TypeSafe `/v1/systemone` drop-in, calibrated by default via a fitted temperature. Frozen evals put Kev-9B about 3.5 points behind Jev on unseen sources; MLX, ROCm, CUDA, and a one-command Modal deploy.
-- [LLM2Jev](https://github.com/Yinsongxu/LLM2Jev) - Adapts local language models into Jev-compatible decision engines with Choice / Score / Noul outputs, via prefill-only binary inference. Apache 2.0.
 - [NanoJev](https://github.com/TianyuCodings/NanoJev) - 0.6B replica trained from scratch, MIT. Ships the weights, the dataset, and the end-to-end training pipeline, plus a side-by-side demo against Jev.
 - [Nimble](https://github.com/bespokelabsai/nimble) - Qwen3.5-9B LoRA from Bespoke Labs. Contrastive recipe, not distilled from Jev. 90% vs Jev 93% on a 324-example holdout.
 - [Open Jev](https://github.com/intikhab49/open-jev-typed-decision-engine) - 150M ModernBERT encoder that answers per-request `noul` / `choice` / `score` questions in one pass. Trains on a Colab T4 in about 30 minutes. Not the same project as SemIf, which was also once called OpenJev.
+- [openJev-verdict-2.0](https://github.com/Heman10x-NGU/openJev-verdict-2.0) - 151M ModernBERT decision engine, non-autoregressive, with published calibration numbers. Claims the top spot over Jev and Laya on the LocalLLaMA typed-decisions benchmark.
+- [PlayJev](https://github.com/OmniJev/PlayJev) - 0.8B multimodal Jev-like model that plays GUI games directly from raw pixels. Apache 2.0.
+- [system-one-open](https://github.com/mithalouni/system-one-open) - Jev-style replica on Gemma 4 E2B / Gemma 3 270M, trained and served on Modal. One forward pass, no decoding. Live demos for support, Doom, browser-use, and smart home.
+- [Tev1](https://github.com/togethercomputer/tev1) - Together AI's Jev-inspired experiment: Qwen3.5 fine-tunes that take state + question + 2–24 options and return one letter — openly next-token, not a non-autoregressive runtime. MIT, with full data recipe and a "train your own for $17" writeup.
+
+### Serve any open model
+
+- [AnyJev](https://github.com/nokia-applied-research/AnyJev) - Turns any LLM into a Jev-style decision model: typed decisions with probabilities, no training. From Nokia Applied Research, Apache 2.0.
+- [djev](https://github.com/Davipar/djev-dev) - DiffusionGemma plus vLLM: an inference method rather than new weights, with native image inputs and a hosted API. Ranked 3rd on JevBench v1.2, just under Jev itself.
+- [jeff](https://github.com/logan-markewich/jeff) - Self-hosted drop-in on GLiFormer 400M, MIT. Speaks the TypeSafe request shape (JevBench drove it with the official adapter); ranked in v1.2.2.
+- [jevmlx](https://github.com/bnsd55/jevmlx) - Jev-style parallel constrained decisions for any MLX model on Apple Silicon. Scores every allowed answer per schema field in one pass, so the output is valid by construction.
+- [jev-visual](https://github.com/hr98w/jev-visual) - Educational Jev-like visual inference experiment on Apple Silicon: shared context, direct candidate scoring, and local visual demos.
+- [LLM2Jev](https://github.com/Yinsongxu/LLM2Jev) - Adapts local language models into Jev-compatible decision engines with Choice / Score / Noul outputs, via prefill-only binary inference. Apache 2.0.
 - [open-alternative-jev](https://github.com/ikermoel/open-alternative-jev) - System One-style layer on open weights, ranked on JevBench. Its cautionary detail: 72% vs 21% on the same answer-judging items with option order flipped.
 - [openjev](https://github.com/razorback16/openjev) - Open, Jev-compatible System One decision server on DiffusionGemma. Apache 2.0.
 - [openjev-sglang](https://github.com/ekzhang/openjev-sglang) - TypeSafe `/v1/systemone` on Qwen 35B MoE via SGLang. Prefill once, then first-token logits per question. No extra training.
-- [openJev-verdict-2.0](https://github.com/Heman10x-NGU/openJev-verdict-2.0) - 151M ModernBERT decision engine, non-autoregressive, with published calibration numbers. Claims the top spot over Jev and Laya on the LocalLLaMA typed-decisions benchmark.
-- [PlayJev](https://github.com/OmniJev/PlayJev) - 0.8B multimodal Jev-like model that plays GUI games directly from raw pixels. Apache 2.0.
 - [reflex](https://github.com/kshetrajna12/reflex) - Open recreation on Qwen3.5. Prefills the state once, then scores every question in parallel from next-token logits. Serves the TypeSafe request shape. Browser demo on WebGPU. #3 on Image JevBench in its released stable configuration.
 - [SemIf](https://github.com/TheoLeeCJ/SemIf-OpenJev) - Runtime-defined semantic decisions from direct option logits. CUDA, MLX, and WebGPU, plus committed benchmarks. Repo recently renamed from SemIf.
 - [simple-jev](https://github.com/featherless-ai/simple-jev) - Turns any open model into a classifier / Jev endpoint. From Featherless, Apache 2.0.
 - [system-one](https://github.com/sgoedecke/system-one) - Turns any open LLM into a System One classifier: batched single-token choice inference, TypeSafe SDK compatible. Doom and wikiracing demos on Qwen3-8B.
-- [system-one-open](https://github.com/mithalouni/system-one-open) - Jev-style replica on Gemma 4 E2B / Gemma 3 270M, trained and served on Modal. One forward pass, no decoding. Live demos for support, Doom, browser-use, and smart home.
 - [systemANE](https://github.com/kerryrm/systemANE) - Apple's Neural Engine as a free local System One decision engine on macOS: "Jev at home."
-- [Tev1](https://github.com/togethercomputer/tev1) - Together AI's Jev-inspired experiment: Qwen3.5 fine-tunes that take state + question + 2–24 options and return one letter — openly next-token, not a non-autoregressive runtime. MIT, with full data recipe and a "train your own for $17" writeup.
 - [von](https://github.com/wfzyx/von) - Non-autoregressive local drop-in, sub-15 ms decisions, Apache 2.0.
 
 ## Agents
