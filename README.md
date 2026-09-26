@@ -83,9 +83,11 @@ Plugins and CLIs that put a System One model inside other software.
 
 - [agentconnect](https://github.com/agentconnect-md/agentconnect) - Multi-agent collaboration across Slack, Telegram, and GitHub, using Jev for agent routing, model selection, and support triage.
 - [ai-cli](https://github.com/vercel-labs/ai-cli) - Vercel Labs terminal client. The `evaluate` command sends a state plus typed questions to `typesafe-ai/jev` on AI Gateway (`-m jev` for short).
+- [Astra-Ares](https://github.com/miuuyy/Astra-Ares) - Adaptive reasoning effort: Jev judges each Codex step and turns GPT-6's thinking effort up or down mid-task, so easy steps stop burning tokens.
 - [blink](https://github.com/ellipsis-dev/blink) - Codebase search powered by Jev decisions: typed questions find where a task lives in a repo.
 - [Canny](https://github.com/qkal/Canny) - Stops coding agents from claiming done without evidence: deterministic hooks decide what needs checking, Jev judges the result.
 - [distill](https://github.com/samuelfaj/distill) - Token-saver for agent sessions with a documented Jev routing layer.
+- [docjev](https://github.com/jerryjliu/docjev) - Very fast document classifier and PDF splitter from the creator of LlamaIndex: plain-English rules, Jev assigns each page a category and finds document boundaries.
 - [fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction) - Claude Code plugin that replaces the compaction summary with Jev decisions: every tool call and result is scored in one request and the stale ones dropped.
 - [Foreman](https://github.com/thruwire/foreman) - Jev as a fast supervisor above slower coding agents, judging whether the work is complete, the requirements met, the tests sufficient, or a human is needed.
 - [hermes-jev-skills](https://github.com/kerpopule/hermes-jev-skills) - Jev-powered skill suite for Hermes agents (also Claude Code and Codex): model routing, memory, compaction, skill selection, computer and browser use.
@@ -99,15 +101,18 @@ Plugins and CLIs that put a System One model inside other software.
 - [jevframe](https://github.com/ktaletsk/jevframe) - Semantic AI for Pandas and Polars: classify and score DataFrame rows with natural-language questions and full probabilities.
 - [jevmail](https://github.com/fazlerocks/jevmail) - Open-source Gmail triage: sorts an inbox into needs-reply / updates / promos / spam. Read-only, runs locally, about 3 cents per 1,000 emails.
 - [jeview](https://github.com/andududu/jeview) - Local visualizer for Jev: a live view of every call your code makes.
+- [jimothy](https://github.com/AndrewPrifer/jimothy) - Turns Jev usage into small local classifiers: `--teacher typesafe-ai/jev` labels the data, then a MiniLM model runs it in Node or the browser.
 - [JevRouter](https://github.com/BillionsBobby/JevRouter) - Jev-powered router across models, tools, and subagents.
 - [jgrep](https://github.com/keltokhy/jgrep) - Grep where the pattern is a description: filters lines by meaning for about a thousandth of a cent each.
 - [json-render](https://github.com/vercel-labs/json-render) - Vercel Labs generative-UI framework with an experimental Jev mode: Jev picks components from your catalog instead of a model writing markup.
 - [memsearch](https://github.com/zilliztech/memsearch) - Zilliz's agent memory layer, with optional Jev reranking and a published Chinese/English reranking evaluation.
+- [perch](https://github.com/lakeday-org/perch) - Semantic code linting: rules written in plain English, judged by Jev.
 - [pg-jev](https://github.com/realZachi/pg-jev) - PostgreSQL extension that lets you ask tables plain-language questions, answered by Jev.
 - [reticle](https://github.com/reticlehq/reticle) - Verification harness for agent-built code; the `jev` driver explores a page by choosing among DOM-enumerated candidates — the model chooses, never composes.
 - [semdecide](https://github.com/sharziki/semdecide) - Jev calls as Unix-pipeline predicates: routing, scoring, and JSONL filtering with stable exit codes, plus an agent-safety guard recipe.
 - [snifftest](https://github.com/DanRWilloughby/snifftest) - Prose linter that sniffs out AI writing tells: zero-dependency countable rules plus one judgment model.
 - [stuntd](https://github.com/bladedevoff/stuntd) - Local proxy that learns your app's typed LLM decisions and answers them itself with a Laya head. Jev- and OpenAI-compatible.
+- [unclutter](https://github.com/kitze/unclutter) - Browser extension that removes page clutter: Jev scores elements against reusable rules, the extension hides the junk.
 - [winnow](https://github.com/GhalebDweikat/winnow) - Claude Code hook that splits large tool results into blocks, asks Jev a yes/no relevance question per block, and stubs the ones that fail.
 
 ## SDKs & Adapters
