@@ -127,6 +127,7 @@ Plugins and CLIs that put a System One model inside other software.
 - [jev-search](https://github.com/superagents-lab/jev-search) - Web search pipeline where Jev handles source selection, query understanding, and relevance ranking.
 - [jev-tree](https://github.com/reachjalil/jev-tree) - Recursive Jev choice over a taxonomy: selects from more than 255 options without hitting the choice cap.
 - [jevframe](https://github.com/ktaletsk/jevframe) - Semantic AI for Pandas and Polars: classify and score DataFrame rows with natural-language questions and full probabilities.
+- [jevgrep](https://github.com/dzhng/jevgrep) - Codebase search for coding agents: Jev judges folders, files, and declarations, then returns reading leads and verbatim source excerpts. npm CLI plus an agent-skill installer; matched the baseline 8/10 on a ten-task SWE-bench at ~30% lower cost.
 - [jgrep](https://github.com/keltokhy/jgrep) - Grep where the pattern is a description: filters lines by meaning for about a thousandth of a cent each.
 - [pg-jev](https://github.com/realZachi/pg-jev) - PostgreSQL extension that lets you ask tables plain-language questions, answered by Jev.
 
