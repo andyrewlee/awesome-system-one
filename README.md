@@ -214,6 +214,7 @@ Cheaper classifiers for comparison. They do not share Jev's request shape.
 - [Cookbooks](https://docs.typesafe.ai/cookbooks) - Official patterns: parallel questions, citation check, RAG passage classification, date extraction, skill suggestion.
 - [How to build with TypeSafe](https://docs.typesafe.ai/concepts/how-to-build-with-system-one) - Keep control flow in code. Split work into atomic questions, then combine the answers and route on uncertainty.
 - [Introducing System One Models & Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) - TypeSafe's launch post: RLCD, parallel sampling, and how this differs from an LLM.
+- [Jev in the Wild](https://arxiv.org/abs/2609.30216) - A data-driven survey and analysis of 2,170 public GitHub Jev projects, mapping early ecosystem growth, application domains, and decision-use patterns.
 - [System One (docs)](https://docs.typesafe.ai/concepts/system-one) - Official definition of the model class and the Choice / Score / Noul primitives.
 - [awesomejev.com](https://awesomejev.com) - Community directory indexing about a thousand Jev projects with daily-refreshed stars. Less curated, good for exhaustive search.
 - [jev.store](https://www.jev.store) - Community store for Jev apps, extensions, and tools: a distribution surface with a submit flow, distinct from the firehose directories.
