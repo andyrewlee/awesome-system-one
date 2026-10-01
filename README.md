@@ -126,6 +126,7 @@ Plugins and CLIs that put a System One model inside other software.
 - [jev-review](https://github.com/devagrawal09/jev-review) - Staged code-review workflow with a local dashboard, using Jev to score and sort findings before a human opens the queue.
 - [perch](https://github.com/lakeday-org/perch) - Semantic code linting: rules written in plain English, judged by Jev.
 - [reticle](https://github.com/reticlehq/reticle) - Verification harness for agent-built code; the `jev` driver explores a page by choosing among DOM-enumerated candidates — the model chooses, never composes.
+- [sedum](https://github.com/sedum-dev/sedum) - Plain-English browser tests on Playwright where Jev only picks targets and next actions (Choice) and judges claims (holds/contradicted Nouls), and code owns every action and verdict. TypeScript, MIT.
 - [snifftest](https://github.com/DanRWilloughby/snifftest) - Prose linter that sniffs out AI writing tells: zero-dependency countable rules plus one judgment model.
 
 ### Search & data
