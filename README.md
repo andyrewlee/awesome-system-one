@@ -150,6 +150,7 @@ Plugins and CLIs that put a System One model inside other software.
 ### Apps & utilities
 
 - [ai-cli](https://github.com/vercel-labs/ai-cli) - Vercel Labs terminal client. The `evaluate` command sends a state plus typed questions to `typesafe-ai/jev` on AI Gateway (`-m jev` for short).
+- [classifier.dev](https://github.com/mrmps/classifier-dev) - Zero-shot text classification as a URL: `classifier.dev/spam,not+spam/your+text` returns a label with calibrated confidence — no key, no account, up to 1,000 texts per call. One Cloudflare Worker on Jev with an LLM fallback chain, plus a CLI and MCP server. MIT.
 - [jevmail](https://github.com/fazlerocks/jevmail) - Open-source Gmail triage: sorts an inbox into needs-reply / updates / promos / spam. Read-only, runs locally, about 3 cents per 1,000 emails.
 - [jeview](https://github.com/andududu/jeview) - Local visualizer for Jev: a live view of every call your code makes.
 - [json-render](https://github.com/vercel-labs/json-render) - Vercel Labs generative-UI framework with an experimental Jev mode: Jev picks components from your catalog instead of a model writing markup.
