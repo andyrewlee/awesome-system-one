@@ -197,7 +197,11 @@ Cheaper classifiers for comparison. They do not share Jev's request shape.
 
 ### Suites & harnesses
 
+- [Amazon ESCI](https://github.com/amazon-science/esci-data) - Shopping-query relevance classification (exact / substitute / complement / irrelevant) at Amazon scale. A Jev Decision Index component.
+- [API-Bank](https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/api-bank) - Alibaba's tool-use benchmark for whether a model picks the right API call. A Jev Decision Index component.
 - [Banking77](https://github.com/PolyAI-LDN/task-specific-datasets) - 77 fine-grained banking intents over 13k queries. Single-domain counterpart to CLINC150, and the benchmark Janus reports wins on. CC BY 4.0.
+- [BFCL](https://gorilla.cs.berkeley.edu/leaderboard) - Berkeley Function Calling Leaderboard: the field's standard for function/tool-call accuracy (ICML 2025). A Jev Decision Index component.
+- [BRIGHT](https://arxiv.org/abs/2407.12883) - Reasoning-intensive retrieval benchmark scored by nDCG — the Jev Decision Index's reranking component, and one Jev still leads.
 - [CLINC150 / OOS-Eval](https://github.com/clinc/oos-eval) - 150 in-scope intents plus explicit out-of-scope examples. Useful for routing, abstention, and confidence-threshold tests. CC BY 3.0.
 - [DecisionBench](https://huggingface.co/datasets/akhilaaa3/decision-bench) - 80 scenarios and 293 questions per tier (medium is rules-based, hard is judgment calls), with a cost-per-decision axis baked in. What Jev-Omni reports on. Apache 2.0.
 - [evals.typesafe.ai](https://evals.typesafe.ai) - TypeSafe's workflow evals: four production-shaped workflows scored against frontier LLM reference probabilities.
@@ -208,7 +212,10 @@ Cheaper classifiers for comparison. They do not share Jev's request shape.
 - [jevals](https://github.com/openlayer-ai/jevals) - Agent evals and guardrails as Jev decisions: one request per trace. Runs locally on Kev or Laya. From Openlayer.
 - [LocalLLaMA/typed-decisions](https://huggingface.co/datasets/LocalLLaMA/typed-decisions) - Community typed-decision suites (customer service, invoices, security incidents, agent traces) the open implementations report accuracy and calibration against. Apache 2.0.
 - [MASSIVE](https://github.com/alexa/massive) - Multilingual intent-and-slot dataset (about 1M utterances, 52 languages) for testing whether a fast decision layer generalizes. CC BY 4.0.
+- [PhishNChips](https://huggingface.co/datasets/AreLit/PhishNChips) - 2,000-email phishing benchmark plus a 220k-run adjudicated grid showing how system-prompt config swings detection. A Jev Decision Index component.
 - [sysone-bench](https://github.com/instax-dutta/sysone-bench) - Head-to-head of System One models: Laya vs Jev on byte-identical inputs.
+- [ToolRet](https://github.com/mangopy/tool-retrieval-benchmark) - ACL 2025 tool-retrieval benchmark: 7.6k retrieval tasks over a 43k-tool corpus, scored by nDCG@10. A Jev Decision Index component.
+- [When2Call](https://aclanthology.org/2025.naacl-long.174/) - Evaluates tool-calling *decisions* rather than accuracy: when to call, when to ask a follow-up, when to admit the tools can't answer. A Jev Decision Index component — and one Jev still leads.
 
 ### Probes & studies
 
