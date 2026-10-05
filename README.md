@@ -141,7 +141,7 @@ Plugins and CLIs that put a System One model inside other software.
 - [jevframe](https://github.com/ktaletsk/jevframe) - Semantic AI for Pandas and Polars: classify and score DataFrame rows with natural-language questions and full probabilities.
 - [jevgrep](https://github.com/dzhng/jevgrep) - Codebase search for coding agents: Jev judges folders, files, and declarations, then returns reading leads and verbatim source excerpts. npm CLI plus an agent-skill installer; matched the baseline 8/10 on a ten-task SWE-bench at ~30% lower cost.
 - [jgrep](https://github.com/keltokhy/jgrep) - Grep where the pattern is a description: filters lines by meaning for about a thousandth of a cent each.
-- [pg-jev](https://github.com/realZachi/pg-jev) - PostgreSQL extension that lets you ask tables plain-language questions, answered by Jev.
+- [pg-jev](https://github.com/realZachi/pg-jev) - PostgreSQL extension (on PGXN): `jev(rows, 'plain-language condition')` filters, ranks, and classifies table rows. The clever part — it batches 20 rows into one shared-state request with a `noul` each, amortizing Jev's request overhead ~2.5×, with read-ahead and per-row answer caching.
 
 ### Train & adapt
 
