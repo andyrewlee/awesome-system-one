@@ -54,6 +54,7 @@ Same request shape on open weights. Not TypeSafe's architecture.
 - [PlayJev](https://github.com/OmniJev/PlayJev) - 0.8B multimodal Jev-like model that plays GUI games directly from raw pixels. Apache 2.0.
 - [system-one-open](https://github.com/mithalouni/system-one-open) - Jev-style replica on Gemma 4 E2B / Gemma 3 270M, trained and served on Modal. One forward pass, no decoding. Live demos for support, Doom, browser-use, and smart home.
 - [Tev1](https://github.com/togethercomputer/tev1) - Together AI's Jev-inspired experiment: Qwen3.5 fine-tunes that take state + question + 2–24 options and return one letter — openly next-token, not a non-autoregressive runtime. MIT, with full data recipe and a "train your own for $17" writeup.
+- [WaterSheep](https://github.com/SamratDuttaOfficial/WaterSheep) - ModernBERT-base fine-tune with a decision head that answers `noul` / `choice` / `score` and also multi-label questions, with a fitted temperature per question type. Publishes its held-out numbers: 61.2% accuracy and 0.043 ECE on datasets it never trained on. Apache 2.0 code and weights; serves TypeSafe `/v1/systemone`, so the official SDK works by repointing `TYPESAFE_BASE_URL`, and an ONNX build runs in the browser.
 
 ### Serve any open model
 
