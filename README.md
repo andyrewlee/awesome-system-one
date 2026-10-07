@@ -201,6 +201,7 @@ Cheaper classifiers for comparison. They do not share Jev's request shape.
 
 - [Amazon ESCI](https://github.com/amazon-science/esci-data) - Shopping-query relevance classification (exact / substitute / complement / irrelevant) at Amazon scale. A Jev Decision Index component.
 - [API-Bank](https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/api-bank) - Alibaba's tool-use benchmark for whether a model picks the right API call. A Jev Decision Index component.
+- [ARC](https://allenai.org/data/arc) - AI2's grade-school science MCQs in Easy and Challenge splits. Part of the standard MCQ battery used in Jev vs Luna Decisions comparisons.
 - [Banking77](https://github.com/PolyAI-LDN/task-specific-datasets) - 77 fine-grained banking intents over 13k queries. Single-domain counterpart to CLINC150, and the benchmark Janus reports wins on. CC BY 4.0.
 - [BFCL](https://gorilla.cs.berkeley.edu/leaderboard) - Berkeley Function Calling Leaderboard: the field's standard for function/tool-call accuracy (ICML 2025). A Jev Decision Index component.
 - [BRIGHT](https://arxiv.org/abs/2407.12883) - Reasoning-intensive retrieval benchmark scored by nDCG — the Jev Decision Index's reranking component, and one Jev still leads.
@@ -208,16 +209,23 @@ Cheaper classifiers for comparison. They do not share Jev's request shape.
 - [DecisionBench](https://huggingface.co/datasets/akhilaaa3/decision-bench) - 80 scenarios and 293 questions per tier (medium is rules-based, hard is judgment calls), with a cost-per-decision axis baked in. What Jev-Omni reports on. Apache 2.0.
 - [evals.typesafe.ai](https://evals.typesafe.ai) - TypeSafe's workflow evals: four production-shaped workflows scored against frontier LLM reference probabilities.
 - [fast-decisions](https://huggingface.co/datasets/fastino/fast-decisions) - Fastino's held-out suite: 17 operational domains × 300 examples each, scoring Jev, SemIf, Laya, and GLiFormer head-to-head on the same inputs. First-party to GLiNER2.5-Decide, which tops it.
+- [GPQA](https://github.com/idavidrein/gpqa) - Graduate-level, Google-proof MCQs; the Diamond subset is the hard tier. Part of the standard MCQ battery used in Jev vs Luna Decisions comparisons.
+- [GSM8K](https://github.com/openai/grade-school-math) - Grade-school math word problems; repurposed as multiple choice with random distractors (4- and 10-option conditions in the Jev vs Luna comparison).
+- [HellaSwag](https://rowanzellers.com/hellaswag) - Commonsense sentence-completion MCQs. Part of the standard MCQ battery used in Jev vs Luna Decisions comparisons.
 - [Image JevBench](https://benchmarkheaven.com/image-jev-bench) - Held-out image-decision suite: 684 items (228 public / 456 sealed) with frozen hashes and contamination tracking — it flagged Kev's Mind2Web training overlap itself. Jev-Omni, decider-vision, and Reflex top it; frontier chat APIs score near zero.
 - [Jev Decision Index](https://huggingface.co/spaces/multimodalart/jev-decision-index) - Community index aggregating ~43 decision-model evals — intent classification, function calling, tool retrieval, reranking — plus latency. The benchmark surface Clef's launch numbers report on.
 - [JevBench](https://github.com/fstandhartinger/jevbench) - Public harness for Jev-class decision models: intelligence, calibration, speed, and cost on shared tasks. About 48 systems ranked; Jev 1.13.0 currently #1.
 - [jevals](https://github.com/openlayer-ai/jevals) - Agent evals and guardrails as Jev decisions: one request per trace. Runs locally on Kev or Laya. From Openlayer.
 - [LocalLLaMA/typed-decisions](https://huggingface.co/datasets/LocalLLaMA/typed-decisions) - Community typed-decision suites (customer service, invoices, security incidents, agent traces) the open implementations report accuracy and calibration against. Apache 2.0.
 - [MASSIVE](https://github.com/alexa/massive) - Multilingual intent-and-slot dataset (about 1M utterances, 52 languages) for testing whether a fast decision layer generalizes. CC BY 4.0.
+- [MMLU](https://github.com/hendrycks/test) - The standard 57-subject multitask MCQ benchmark. Part of the standard MCQ battery used in Jev vs Luna Decisions comparisons.
+- [MMLU-Pro](https://github.com/TIGER-AI-Lab/MMLU-Pro) - Harder MMLU successor with 10-option questions and more reasoning. Part of the standard MCQ battery used in Jev vs Luna Decisions comparisons.
+- [MuSR](https://github.com/Zayne-sprague/MuSR) - Multistep soft-reasoning MCQs (murder mysteries, object placements, team allocation). Part of the standard MCQ battery used in Jev vs Luna Decisions comparisons.
 - [PhishNChips](https://huggingface.co/datasets/AreLit/PhishNChips) - 2,000-email phishing benchmark plus a 220k-run adjudicated grid showing how system-prompt config swings detection. A Jev Decision Index component.
 - [sysone-bench](https://github.com/instax-dutta/sysone-bench) - Head-to-head of System One models: Laya vs Jev on byte-identical inputs.
 - [ToolRet](https://github.com/mangopy/tool-retrieval-benchmark) - ACL 2025 tool-retrieval benchmark: 7.6k retrieval tasks over a 43k-tool corpus, scored by nDCG@10. A Jev Decision Index component.
 - [When2Call](https://aclanthology.org/2025.naacl-long.174/) - Evaluates tool-calling *decisions* rather than accuracy: when to call, when to ask a follow-up, when to admit the tools can't answer. A Jev Decision Index component — and one Jev still leads.
+- [WinoGrande](https://winogrande.allenai.org) - Pronoun-resolution commonsense MCQs, adversarially filtered. Part of the standard MCQ battery used in Jev vs Luna Decisions comparisons.
 
 ### Probes & studies
 
