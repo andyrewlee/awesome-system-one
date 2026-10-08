@@ -29,6 +29,7 @@ Hosted or open. State in, typed answers out.
 - [Jev-Omni](https://huggingface.co/akhilaaa3/Jev-Omni) - Multimodal decision classifier on Gemma 4 12B: text, image, audio, or video in, a probability per option out. Apache 2.0 weights. One question per call, best under about 20 options. Currently #1 on Image JevBench.
 - [Laya](https://github.com/NandhaKishorM/laya) - Multilingual, non-autoregressive decision engine. Typed `choice` / `score` / `noul` over 100+ languages in a single forward pass (about 33 ms on a T4). Router across English, multilingual, and typed-decisions checkpoints. Apache 2.0.
 - [NeuDecide](https://huggingface.co/spaces/neuphonic/neudecide) - Neuphonic's ~40 MB voice-action model: speech in, an action decision out, running entirely on WebAssembly in the browser. From the neuTTS/neucodec audio lab; model repo is gated, the Space is the public demo.
+- [Vela](https://huggingface.co/vllm-sr/Vela-2.0-0.3B) - KR Labs × vLLM Semantic Router's open decision-model family (0.3B–9B, bidirectional ModernBERT encoder, 17 languages, Apache 2.0). Choice, Noul, and Score plus two new question types: Span — labeled text spans with offsets for PII and unsupported claims — and Set multi-label. SystemOne-compatible HTTP and Python APIs, ONNX runtime, and a Core ML port with a Swift runtime for Apple silicon. Trained for router work: routing, prompt-attack, PII, and hallucination screening.
 
 ### Hosted
 
@@ -129,6 +130,7 @@ Plugins and CLIs that put a System One model inside other software.
 - [jev-codex-router](https://github.com/0xNatoshi/jev-codex-router) - Per-turn model and reasoning-effort routing for Codex. Jev classifies each turn and picks the tier; a 7-day replay of 237 real turns measured about 60% savings against all-frontier.
 - [JevRouter](https://github.com/BillionsBobby/JevRouter) - Jev-powered router across models, tools, and subagents.
 - [pi-jev](https://github.com/TheoOliveira/pi-jev) - Pi coding-agent extension: semantic tool and skill routing, typed `choice` / `noul` / `score` evaluations, optional auto-approval, and a post-run `jev-gate` CLI.
+- [vLLM Semantic Router](https://github.com/vllm-project/semantic-router) - Open, programmable decision layer for models and compute: routes requests across models, enforces safety checks, and picks reasoning effort — with the Vela decision models as its routing brain. Apache 2.0.
 
 ### Review & verification
 
