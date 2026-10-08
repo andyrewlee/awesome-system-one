@@ -156,6 +156,7 @@ Plugins and CLIs that put a System One model inside other software.
 
 ### Train & adapt
 
+- [bandits](https://github.com/bandr-ai/bandits) - Trace mining for post-training: reads agent traces (OTel, Langfuse, Claude Code), judges each step by the tool's reaction rather than the agent's claim, distills the LLM judge into deterministic Python checks a human signs off on, and exports labeled SFT rows with full lineage. Its bundled Jev recipe trains a decision model on those labels with an honest scorecard — their Qwen3.5-4B reports 79.1% vs Jev's 66.8% on 1,920 held-out AgentProcessBench steps.
 - [jev-align](https://github.com/sutro-sh/jev-align) - Build calibrated AI functions from human feedback: Jev judgments optimized with GEPA. From Sutro.
 - [jimothy](https://github.com/AndrewPrifer/jimothy) - Turns Jev usage into small local classifiers: `--teacher typesafe-ai/jev` labels the data, then a MiniLM model runs it in Node or the browser.
 
