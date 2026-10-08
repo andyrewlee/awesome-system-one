@@ -54,6 +54,7 @@ Same request shape on open weights. Not TypeSafe's architecture.
 - [PlayJev](https://github.com/OmniJev/PlayJev) - 0.8B multimodal Jev-like model that plays GUI games directly from raw pixels. Apache 2.0.
 - [system-one-open](https://github.com/mithalouni/system-one-open) - Jev-style replica on Gemma 4 E2B / Gemma 3 270M, trained and served on Modal. One forward pass, no decoding. Live demos for support, Doom, browser-use, and smart home.
 - [Tev1](https://github.com/togethercomputer/tev1) - Together AI's Jev-inspired experiment: Qwen3.5 fine-tunes that take state + question + 2–24 options and return one letter — openly next-token, not a non-autoregressive runtime. MIT, with full data recipe and a "train your own for $17" writeup.
+- [Valen](https://github.com/Liuziyu77/Valen) - Train-your-own multimodal System One model: evaluates text, images, and video against task instructions and returns probabilities over supplied candidates. Ships the model code, data pipeline, SFT plus experimental RLCD training, and evals.
 - [WaterSheep](https://github.com/SamratDuttaOfficial/WaterSheep) - ModernBERT-base fine-tune with a decision head that answers `noul` / `choice` / `score` and also multi-label questions, with a fitted temperature per question type. Publishes its held-out numbers: 61.2% accuracy and 0.043 ECE on datasets it never trained on. Apache 2.0 code and weights; serves TypeSafe `/v1/systemone`, so the official SDK works by repointing `TYPESAFE_BASE_URL`, and an ONNX build runs in the browser.
 
 ### Serve any open model
@@ -64,6 +65,7 @@ Same request shape on open weights. Not TypeSafe's architecture.
 - [jevmlx](https://github.com/bnsd55/jevmlx) - Jev-style parallel constrained decisions for any MLX model on Apple Silicon. Scores every allowed answer per schema field in one pass, so the output is valid by construction.
 - [jev-visual](https://github.com/hr98w/jev-visual) - Educational Jev-like visual inference experiment on Apple Silicon: shared context, direct candidate scoring, and local visual demos.
 - [LLM2Jev](https://github.com/Yinsongxu/LLM2Jev) - Adapts local language models into Jev-compatible decision engines with Choice / Score / Noul outputs, via prefill-only binary inference. Apache 2.0.
+- [ollaya](https://github.com/ollaya-dev/ollaya) - Ollama for decision models: `ollaya pull` / `serve` / `run` manage Laya, decider, NLI, and GLiClass locally behind a wire-identical TypeSafe `/v1/systemone` (and `/v1/decisions`) endpoint.
 - [open-alternative-jev](https://github.com/ikermoel/open-alternative-jev) - System One-style layer on open weights, ranked on JevBench. Its cautionary detail: 72% vs 21% on the same answer-judging items with option order flipped.
 - [openjev](https://github.com/razorback16/openjev) - Open, Jev-compatible System One decision server on DiffusionGemma. Apache 2.0.
 - [openjev-sglang](https://github.com/ekzhang/openjev-sglang) - TypeSafe `/v1/systemone` on Qwen 35B MoE via SGLang. Prefill once, then first-token logits per question. No extra training.
@@ -118,6 +120,7 @@ Plugins and CLIs that put a System One model inside other software.
 - [Astra-Ares](https://github.com/miuuyy/Astra-Ares) - Adaptive reasoning effort: Jev judges each Codex step and turns GPT-6's thinking effort up or down mid-task, so easy steps stop burning tokens.
 - [Foreman](https://github.com/thruwire/foreman) - Jev as a fast supervisor above slower coding agents, judging whether the work is complete, the requirements met, the tests sufficient, or a human is needed.
 - [hermes-jev-skills](https://github.com/kerpopule/hermes-jev-skills) - Jev-powered skill suite for Hermes agents (also Claude Code and Codex): model routing, memory, compaction, skill selection, computer and browser use.
+- [Intent-Router](https://github.com/angel291592/Intent-Router) - Intent compiler that converges vague requests into typed `IntentSpec` contracts — probe, ask, or halt — before routing. The input layer in front of routers and decision models like Jev or Laya.
 - [jev-codex-router](https://github.com/0xNatoshi/jev-codex-router) - Per-turn model and reasoning-effort routing for Codex. Jev classifies each turn and picks the tier; a 7-day replay of 237 real turns measured about 60% savings against all-frontier.
 - [JevRouter](https://github.com/BillionsBobby/JevRouter) - Jev-powered router across models, tools, and subagents.
 - [pi-jev](https://github.com/TheoOliveira/pi-jev) - Pi coding-agent extension: semantic tool and skill routing, typed `choice` / `noul` / `score` evaluations, optional auto-approval, and a post-run `jev-gate` CLI.
@@ -180,6 +183,7 @@ Plugins and CLIs that put a System One model inside other software.
 - [hono-jev-router](https://github.com/yusukebe/hono-jev-router) - Semantic HTTP routing middleware for Hono: route requests by meaning, from Hono's creator.
 - [jev-mcp](https://github.com/jkudish/jev-mcp) - MCP server of Jev judgment tools: verify, screen, find, rerank, classify, decide, compare, extract, review, and gate.
 - [laya-mlx](https://github.com/mizorewww/laya-mlx) - Native MLX runtime for Laya on Apple Silicon: 7–14 ms decisions on an M3 Max, no GPU server needed.
+- [receptron/laya](https://github.com/receptron/laya) - Run Laya from Node.js / TypeScript via ONNX Runtime; the ~1.7 GB weights download from Hugging Face on first use.
 - [system-one-adapter-python](https://github.com/typesafe-ai/system-one-adapter-python) - Drop-in `TypeSafeClient` replacement backed by OpenAI or Anthropic, for comparing Jev against an LLM on the same questions.
 - [typesafe-mcp](https://github.com/itsmostafa/typesafe-mcp) - MCP server as a single static Go binary, no Node or Python runtime. Sends usage guidance back to the client so the agent writes better questions.
 
