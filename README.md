@@ -28,6 +28,7 @@ Hosted or open. State in, typed answers out.
 - [GLiNER2.5-Decide](https://huggingface.co/fastino/GLiNER2.5-Decide) - Decision specialist from the GLiNER team: any label set at call time — intent, routing, multi-label tags, ordinal scores — answered in one forward pass with no generated tokens. Apache 2.0, in 340M / 1B / multilingual builds. Claims 60.2% vs JevK5's 57.6% on Fastino's own 17-domain suite.
 - [Jev-Omni](https://huggingface.co/akhilaaa3/Jev-Omni) - Multimodal decision classifier on Gemma 4 12B: text, image, audio, or video in, a probability per option out. Apache 2.0 weights. One question per call, best under about 20 options. Currently #1 on Image JevBench.
 - [Laya](https://github.com/NandhaKishorM/laya) - Multilingual, non-autoregressive decision engine. Typed `choice` / `score` / `noul` over 100+ languages in a single forward pass (about 33 ms on a T4). Router across English, multilingual, and typed-decisions checkpoints. Apache 2.0.
+- [NeuDecide](https://huggingface.co/spaces/neuphonic/neudecide) - Neuphonic's ~40 MB voice-action model: speech in, an action decision out, running entirely on WebAssembly in the browser. From the neuTTS/neucodec audio lab; model repo is gated, the Space is the public demo.
 
 ### Hosted
 
