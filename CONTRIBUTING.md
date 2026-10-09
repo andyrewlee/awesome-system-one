@@ -24,3 +24,11 @@ Skip it when:
 - It's a variant of a pattern already covered (we don't need a third context pruner or a fifth browser agent).
 - The Jev/System One usage is incidental rather than load-bearing.
 - The repo is a stub, a joke, or claims numbers it doesn't back up.
+
+## Listed?
+
+If your project made the list, linking back helps people find the rest of the ecosystem. A badge works:
+
+```markdown
+[![Listed in awesome-system-one](https://img.shields.io/badge/listed%20in-awesome--system--one-blue)](https://github.com/andyrewlee/awesome-system-one)
+```
