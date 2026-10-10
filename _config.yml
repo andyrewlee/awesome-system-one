@@ -1,0 +1,6 @@
+title: Awesome System One
+description: Curated list of System One decision models — Jev and open alternatives — plus agents, tools, SDKs, and benchmarks.
+theme: jekyll-theme-cayman
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

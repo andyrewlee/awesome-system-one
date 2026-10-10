@@ -1,8 +1,8 @@
 # Awesome System One [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of System One models and tools.
+A curated list of System One decision models — Jev and open alternatives — plus the agents, tools, SDKs, and benchmarks built around them.
 
-You give them some state and a set of typed questions. They give back a choice, a score, or a yes/no probability. No generated text, so nothing to parse. TypeSafe named the class after Kahneman's System 1; this list is about the software. Jev was the first commercial model.
+You give them some state and a set of typed questions. They give back a choice, a score, or a yes/no probability. No generated text, so nothing to parse — which makes them the fast, cheap primitive for routing, classification, verification, and agent supervision. TypeSafe named the class after Kahneman's System 1; this list is about the software. Jev was the first commercial model.
 
 ## Contents
 
