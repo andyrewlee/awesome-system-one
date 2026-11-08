@@ -12,8 +12,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: lycheeverse/lychee-action@v2
         with:
-          # 403/429 = bot-blocking or rate limiting on a live link (arxiv, pubmed, science.org, etc.)
-          args: --verbose --no-progress --accept 403,429 README.md
+          # 200 = OK; 403/429 = bot-blocking or rate limiting on a live link (arxiv, pubmed, science.org, etc.)
+          # --accept replaces lychee's defaults, so 200 must be listed explicitly.
+          args: --verbose --no-progress --accept 200,403,429 README.md
           fail: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
