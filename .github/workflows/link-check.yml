@@ -14,7 +14,8 @@ jobs:
         with:
           # 200 = OK; 403/429 = bot-blocking or rate limiting on a live link (arxiv, pubmed, science.org, etc.)
           # --accept replaces lychee's defaults, so 200 must be listed explicitly.
-          args: --verbose --no-progress --accept 200,403,429 README.md
+          # 20s timeout: surd.ai is slow-but-alive and fails the 10s default.
+          args: --verbose --no-progress --timeout 20 --accept 200,403,429 README.md
           fail: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
